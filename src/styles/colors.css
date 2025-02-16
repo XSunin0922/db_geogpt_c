@@ -1,0 +1,24 @@
+:root {
+    /* 主色调 */
+    --color-primary: #0F1C2D;
+    --color-secondary: #1F2B3D;
+
+    /* 地图配色 */
+    --map-low: #DEEBF7;
+    --map-medium: #6FA8DC;
+    --map-high: #0B5394;
+
+    /* 图表配色 */
+    --chart-primary: #4A90E2;
+    --chart-secondary: #FF6F61;
+    --chart-tertiary: #8CBB60;
+
+    /* 文字配色 */
+    --text-primary: #FFFFFF;
+    --text-secondary: #AAB7C4;
+
+    /* 交互状态 */
+    --state-success: #4CAF50;
+    --state-warning: #FFC107;
+    --state-error: #F44336;
+}
