@@ -1,9 +1,10 @@
 <script setup>
-import Map from "./components/Map.vue";
+// import Map from "./components/Map.vue";
+import Index from "./views/index.vue";
 </script>
 
 <template>
-  <Map></Map>
+  <Index />
 </template>
 
 <style scoped>

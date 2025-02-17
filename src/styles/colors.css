@@ -2,6 +2,10 @@
     /* 主色调 */
     --color-primary: #0F1C2D;
     --color-secondary: #1F2B3D;
+    --color-primary-light: #15253a;
+    --color-primary-dark: #0a1322;
+    --tt: #3498DB;
+    --color-secondary1: #5DADE2;
 
     /* 地图配色 */
     --map-low: #DEEBF7;
@@ -12,13 +16,20 @@
     --chart-primary: #4A90E2;
     --chart-secondary: #FF6F61;
     --chart-tertiary: #8CBB60;
+    --chart-accent: #FFC107; /* 新增图表强调色 */
 
     /* 文字配色 */
     --text-primary: #FFFFFF;
     --text-secondary: #AAB7C4;
+    --text-muted: #ccc;
+
+    /* 背景色 */
+    --background-light: #f0f5f9;
+    --background-dark: #08101c;
 
     /* 交互状态 */
     --state-success: #4CAF50;
     --state-warning: #FFC107;
     --state-error: #F44336;
+    --state-info: #3399ff; /* 新增信息状态色 */
 }
