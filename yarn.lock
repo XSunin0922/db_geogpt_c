@@ -1425,7 +1425,7 @@ sass-embedded-win32-x64@1.85.0:
 
 sass-embedded@^1.85.0:
   version "1.85.0"
-  resolved "https://registry.npmmirror.com/sass-embedded/-/sass-embedded-1.85.0.tgz#a491fe3f1b90440d6be3a2459520f2e7c67a40cd"
+  resolved "https://registry.yarnpkg.com/sass-embedded/-/sass-embedded-1.85.0.tgz#a491fe3f1b90440d6be3a2459520f2e7c67a40cd"
   integrity sha512-x3Vv54g0jv1aPSW8OTA/0GzQCs/HMQOjIkLtZJ3Xsn/I4vnyjKbVTQmFTax9bQjldqLEEkdbvy6ES/cOOnYNwA==
   dependencies:
     "@bufbuild/protobuf" "^2.0.0"
