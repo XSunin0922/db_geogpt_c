@@ -50,6 +50,5 @@ onMounted(() => {
 <style scoped>
 #mapContainer {
   height: 100%;
-  position: relative;
 }
 </style>
