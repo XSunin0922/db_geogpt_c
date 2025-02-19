@@ -17,7 +17,7 @@ const handleReset = () => {
 <template>
   <el-menu
       :default-openeds="['1', '2', '3']"
-      style="user-select: none"
+      style="user-select: none; border-right: none"
   >
     <el-sub-menu index="1">
       <template #title>
@@ -81,6 +81,10 @@ const handleReset = () => {
       </el-sub-menu>
       <el-sub-menu index="2-2">
         <template #title>柱状分析</template>
+        <el-menu-item></el-menu-item>
+      </el-sub-menu>
+      <el-sub-menu index="2-3">
+        <template #title>时间切片分析</template>
         <el-menu-item></el-menu-item>
       </el-sub-menu>
     </el-sub-menu>

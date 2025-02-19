@@ -29,9 +29,9 @@ const statusStore = useStatusStore()
       <div class="left_column"><left /></div>
       <div class="middle_column">
         <div class="map"><Map /></div>
-        <div class="bottom"></div>
+        <div class="bottom"><bottom /></div>
       </div>
-      <div class="right_column"></div>
+      <div class="right_column"><right /></div>
     </div>
   </div>
 </template>
@@ -40,7 +40,6 @@ const statusStore = useStatusStore()
 @import "../styles/colors.css";
 .main {
   height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -49,7 +48,7 @@ const statusStore = useStatusStore()
     user-select: none;
     position: relative;
     height: 60px;
-    background-color: #1F2B3D;
+    background-color: var(--color-secondary);
     display: flex;
     flex-wrap: wrap;
     flex-shrink: 0;
@@ -57,7 +56,7 @@ const statusStore = useStatusStore()
     justify-content: space-between;
     font-family: "PingFang SC", sans-serif;
     .title {
-      color: #FFFFFF;
+      color: var(--text-primary);
       margin-left: 20px;
       font-size: 25px;
       font-weight: 550;
@@ -74,7 +73,7 @@ const statusStore = useStatusStore()
         flex-direction: column;
         align-items: center;
         gap: 2px;
-        color: #FFFFFF;
+        color: var(--text-primary);
         font-size: 12px;
         font-weight: 500;
         letter-spacing: 2px;
@@ -82,13 +81,13 @@ const statusStore = useStatusStore()
     }
   }
   .body {
-    flex: 1;
+    height: calc(100% - 60px);
     display: flex;
     .left_column {
-      overflow: auto;
-      flex-shrink: 0;
+      overflow-y: auto;
       width: 350px;
-      height: 100%;
+      box-sizing: border-box;
+      border-right: 2px solid var(--el-menu-border-color);
     }
     .middle_column {
       height: 100%;
@@ -96,21 +95,43 @@ const statusStore = useStatusStore()
       flex: 1;
       display: flex;
       flex-direction: column;
-      background-color: #f0f0f0;
-
       .map {
         height: 600px;
       }
       .bottom {
         height: calc(100% - 600px);
-        background-color: #f0f0f0;
+        border-top: 2px solid var(--el-menu-border-color);
+        box-sizing: border-box;
+        padding: 5px;
       }
     }
     .right_column {
-      height: 100%;
+      border-left: 2px solid var(--el-menu-border-color);
+      box-sizing: border-box;
+      padding: 10px;
+      overflow-y: auto;
       width: 450px;
-      background-color: #f0f0f0;
     }
   }
+}
+/* 滚动条整体样式 */
+::-webkit-scrollbar {
+  width: 6px; /* 滚动条宽度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background: var(--el-menu-bg-color); /* 轨道背景颜色 */
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background: #888; /* 滑块背景颜色 */
+  border-radius: 4px; /* 滑块圆角 */
+}
+
+/* 滑块悬停时的样式 */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* 悬停时滑块背景颜色 */
 }
 </style>
