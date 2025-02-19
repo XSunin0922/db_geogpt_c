@@ -43,6 +43,8 @@ const statusStore = useStatusStore()
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
   .header {
     user-select: none;
     position: relative;
@@ -50,6 +52,7 @@ const statusStore = useStatusStore()
     background-color: #1F2B3D;
     display: flex;
     flex-wrap: wrap;
+    flex-shrink: 0;
     align-content: center;
     justify-content: space-between;
     font-family: "PingFang SC", sans-serif;
@@ -82,6 +85,8 @@ const statusStore = useStatusStore()
     flex: 1;
     display: flex;
     .left_column {
+      overflow: auto;
+      flex-shrink: 0;
       width: 350px;
       height: 100%;
     }
