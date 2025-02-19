@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from 'vue'
+import {extentOptions, indexOptions} from "../utils/setParams_option.js";
 
 const indexes = ref([])
 const extents = ref([])
@@ -11,6 +12,9 @@ const handleReset = () => {
   indexes.value = []
   extents.value = []
   years.value = []
+}
+const handleSearch = () => {
+  console.log(indexes.value, extents.value, years.value)
 }
 </script>
 
@@ -34,7 +38,8 @@ const handleReset = () => {
               :props="props"
               collapse-tags
               v-model="indexes"
-              filterable clearable>
+              filterable clearable
+              :show-all-levels="false">
             <template #default="{ node, data }">
               <span>{{ data.label }}</span>
               <span v-if="!node.isLeaf"> ({{ data.children.length }}) </span>
@@ -66,7 +71,7 @@ const handleReset = () => {
         </div>
         <div>
           <el-button type="info" @click="handleReset">重置</el-button>
-          <el-button type="primary" style="margin-left: 15px">检索</el-button>
+          <el-button type="primary" style="margin-left: 15px" @click="handleSearch">检索</el-button>
         </div>
       </el-menu-item>
     </el-sub-menu>
@@ -112,7 +117,7 @@ const handleReset = () => {
 
 <style scoped>
 .search {
-  height: 200px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   .jjzb_extent_year {
